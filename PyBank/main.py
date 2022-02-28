@@ -10,7 +10,7 @@ monthly_change = []
 greatest_increase = ["", 0]
 greatest_decrease = ["", 9999999999999999999999]
 
-pybank_csv = os.path.join('..', 'Resources', 'budget_data.csv')
+pybank_csv = os.path.join('', 'Resources', 'budget_data.csv')
 with open(pybank_csv,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -47,11 +47,11 @@ with open(pybank_csv,'r') as csvfile:
     print("Greatest Increase in Profits: " + str(greatest_increase[0]) + " ($" + str(greatest_increase[1]) +")")
     print("Greatest Decrease in Profits: " + str(greatest_decrease[0]) + " ($" + str(greatest_decrease[1]) +")")
 
-output_path = os.path.join("output.txt")
+output_path = os.path.join("","analysis", "output.txt")
 with open(output_path, "w") as txt_file:
     
 
-    txt_file.write("..", "analysis", "Financial Analysis")
+    txt_file.write("Financial analysis")
     txt_file.write("\n")
     txt_file.write("---------------------------------------------------------")
     txt_file.write("\n")

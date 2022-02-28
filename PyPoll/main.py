@@ -8,7 +8,7 @@ candidates = []
 candidate_votes = {}
 greatest_votes = ["", 0]
 
-pypoll_csv = os.path.join('election_data.csv')
+pypoll_csv = os.path.join('', 'Resources', 'election_data.csv')
 with open(pypoll_csv,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -35,7 +35,7 @@ with open(pypoll_csv,'r') as csvfile:
         print("-----------------------------------------")
 
         for candidate in candidate_votes:
-            print(candidate + " : " + str((candidate_votes[candidate]/total_votes)*100) + "%" + " (" + str(candidate_votes[candidate]) + ")")
+            print(candidate + " : " + str((candidate_votes[candidate]/total_votes)*100 ) + " %" + " (" + str(candidate_votes[candidate]) + ")")
             
             winner = sorted(candidates)
 
@@ -43,7 +43,7 @@ with open(pypoll_csv,'r') as csvfile:
         print("Winner: " + str(winner[1]))
         print("-----------------------------------------")
           
-output_path = os.path.join("output.txt")
+output_path = os.path.join("","analysis", "output.txt")
 with open(output_path, "w") as txt_file:
 
 
@@ -56,7 +56,7 @@ with open(output_path, "w") as txt_file:
     txt_file.write("------------------------------------")
     txt_file.write("\n")
     for candidate in candidate_votes:
-        txt_file.write(candidate + " : " + str((candidate_votes[candidate]/total_votes)*100) + "%" + " (" + str(candidate_votes[candidate]) + ")""\n")
+        txt_file.write(candidate + " : " + str((candidate_votes[candidate]/total_votes)*100 ) + " %" + " (" + str(candidate_votes[candidate]) + ")""\n")
     txt_file.write("-----------------------------------")
     txt_file.write("\n")
     txt_file.write("Winner: " + str(winner[1]))
